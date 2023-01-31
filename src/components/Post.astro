@@ -9,11 +9,11 @@ const { post } = Astro.props;
 ---
 
 <li class='flex flex-row bg-white border'>
-  <div class='flex w-[100px] bg-red-200'></div>
+  <!-- <div class='w-[40px] bg-red-200'></div> -->
   <div class='flex flex-col gap-2 self-center p-2'>
     <h2 class='text-xl font-bold'>{post.title}</h2>
     <p class='text-sm text-slate-700 max-h-[20px] text-ellipsis overflow-clip'>
-      {post.content}
+      {post.body}
     </p>
     <div class='flex flex-row items-center gap-2 text-sm'>
       <span class='text-slate-700'>Published by Alejandro La Rosa</span>

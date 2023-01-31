@@ -2,25 +2,13 @@
 import Posts from '../components/Posts.astro';
 import Layout from '../layouts/Layout.astro';
 
-const posts = [
-  {
-    id: 1,
-    title: 'Hello World',
-    slug: 'hello-world',
-    date: '2021-01-01',
-    content: 'This is my first post',
-    author: 'John Doe',
-  },
-  {
-    id: 2,
-    title: 'Hello World 2',
-    slug: 'hello-world-2',
-    date: '2021-01-01',
-    content:
-      'lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
-    author: 'John Doe',
-  },
-];
+const getPosts = async () => {
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const data = await res.json();
+  return data;
+};
+
+const posts = await getPosts();
 ---
 
 <Layout title='Blogger'>
