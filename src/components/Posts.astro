@@ -1,0 +1,14 @@
+---
+import Post from './Post.astro';
+import type IPost from '../types/post';
+
+type Props = {
+  posts: Array<IPost>;
+};
+
+const { posts } = Astro.props;
+---
+
+<ul class='flex flex-col gap-2 mt-8'>
+  {posts.map((post) => <Post post={post} />)}
+</ul>

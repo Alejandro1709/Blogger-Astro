@@ -1,80 +1,32 @@
 ---
+import Posts from '../components/Posts.astro';
 import Layout from '../layouts/Layout.astro';
+
+const posts = [
+  {
+    id: 1,
+    title: 'Hello World',
+    slug: 'hello-world',
+    date: '2021-01-01',
+    content: 'This is my first post',
+    author: 'John Doe',
+  },
+  {
+    id: 2,
+    title: 'Hello World 2',
+    slug: 'hello-world-2',
+    date: '2021-01-01',
+    content:
+      'lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
+    author: 'John Doe',
+  },
+];
 ---
 
 <Layout title='Blogger'>
   <main>
     <section class='max-w-screen-md mx-auto'>
-      <ul class='flex flex-col gap-2 mt-8'>
-        <li class='flex flex-row shrink-0 bg-white border'>
-          <div class='w-[320px] bg-red-200'></div>
-          <div class='flex flex-col gap-2 self-center p-2'>
-            <h2 class='text-xl font-bold'>Blog Post Title</h2>
-            <p class='text-sm text-slate-700'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-              rerum ex, voluptate minima odio quidem quod unde possimus. Impedit
-              magnam quaerat optio, ratione, voluptas voluptatibus itaque a quia
-              adipisci ullam molestiae iure, earum accusantium ipsam? Commodi
-              placeat ex deleniti dicta.
-            </p>
-            <div class='flex flex-row items-center justify-between text-sm'>
-              <span class='text-slate-700'>Published by Alejandro La Rosa</span>
-              <a class='text-blue-500' href='#'>Read More</a>
-            </div>
-          </div>
-        </li>
-        <li class='flex flex-row shrink-0 bg-white border'>
-          <div class='w-[320px] bg-red-200'></div>
-          <div class='flex flex-col gap-2 self-center p-2'>
-            <h2 class='text-xl font-bold'>Blog Post Title</h2>
-            <p class='text-sm text-slate-700'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-              rerum ex, voluptate minima odio quidem quod unde possimus. Impedit
-              magnam quaerat optio, ratione, voluptas voluptatibus itaque a quia
-              adipisci ullam molestiae iure, earum accusantium ipsam? Commodi
-              placeat ex deleniti dicta.
-            </p>
-            <div class='flex flex-row items-center justify-between text-sm'>
-              <span class='text-slate-700'>Published by Alejandro La Rosa</span>
-              <a class='text-blue-500' href='#'>Read More</a>
-            </div>
-          </div>
-        </li>
-        <li class='flex flex-row shrink-0 bg-white border'>
-          <div class='w-[320px] bg-red-200'></div>
-          <div class='flex flex-col gap-2 self-center p-2'>
-            <h2 class='text-xl font-bold'>Blog Post Title</h2>
-            <p class='text-sm text-slate-700'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-              rerum ex, voluptate minima odio quidem quod unde possimus. Impedit
-              magnam quaerat optio, ratione, voluptas voluptatibus itaque a quia
-              adipisci ullam molestiae iure, earum accusantium ipsam? Commodi
-              placeat ex deleniti dicta.
-            </p>
-            <div class='flex flex-row items-center justify-between text-sm'>
-              <span class='text-slate-700'>Published by Alejandro La Rosa</span>
-              <a class='text-blue-500' href='#'>Read More</a>
-            </div>
-          </div>
-        </li>
-        <li class='flex flex-row shrink-0 bg-white border'>
-          <div class='w-[320px] bg-red-200'></div>
-          <div class='flex flex-col gap-2 self-center p-2'>
-            <h2 class='text-xl font-bold'>Blog Post Title</h2>
-            <p class='text-sm text-slate-700'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-              rerum ex, voluptate minima odio quidem quod unde possimus. Impedit
-              magnam quaerat optio, ratione, voluptas voluptatibus itaque a quia
-              adipisci ullam molestiae iure, earum accusantium ipsam? Commodi
-              placeat ex deleniti dicta.
-            </p>
-            <div class='flex flex-row items-center justify-between text-sm'>
-              <span class='text-slate-700'>Published by Alejandro La Rosa</span>
-              <a class='text-blue-500' href='#'>Read More</a>
-            </div>
-          </div>
-        </li>
-      </ul>
+      <Posts posts={posts} />
     </section>
   </main>
 </Layout>
